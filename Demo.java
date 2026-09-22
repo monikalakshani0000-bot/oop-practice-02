@@ -7,26 +7,27 @@ class Demo{
 		f1.setTitle("Calculator");
 		f1.setLocationRelativeTo(null);
 		f1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		f1.setLayout(new FlowLayout(FlowLayout.RIGHT));
 		
 		JButton btnSouth=new JButton("South");
 		btnSouth.setFont(new Font("",Font.BOLD,25));
-		f1.add("South",btnSouth);
+		f1.add(btnSouth);
 		
 		JButton btnNorth=new JButton("North");
 		btnNorth.setFont(new Font("",Font.BOLD,25));
-		f1.add("North",btnNorth);
+		f1.add(btnNorth);
 		
 		JButton btnWest=new JButton("West");
 		btnWest.setFont(new Font("",Font.BOLD,25));
-		f1.add("West",btnWest);
+		f1.add(btnWest);
 		
 		JButton btnEast=new JButton("East");
 		btnEast.setFont(new Font("",Font.BOLD,25));
-		f1.add("East",btnEast);
+		f1.add(btnEast);
 		
 		JButton btnCenter=new JButton("Center");
 		btnCenter.setFont(new Font("",Font.BOLD,25));
-		f1.add("Center",btnCenter);
+		f1.add(btnCenter);
 		f1.setVisible(true);
 	}
 }
