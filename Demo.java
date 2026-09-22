@@ -3,47 +3,44 @@ import java.awt.*;
 class Demo{
 	public static void main(String[] args) {
 		JFrame f1=new JFrame();
-		f1.setSize(500,500);
+		f1.setSize(300,300);
 		f1.setTitle("Calculator");
 		f1.setLocationRelativeTo(null);
 		f1.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		f1.setLayout(new FlowLayout());
-		f1.setLayout(new GridLayout(4,2,2,2));
 		
+		JButton btnSouth=new JButton("South");
+		btnSouth.setFont(new Font("",Font.BOLD,25));
+		f1.add("South",btnSouth);
 		
-		JLabel idL = new JLabel("ID");
-		idL.setFont(new Font("",1,25));
-		f1.add(idL);
+		JButton btnNorth=new JButton("North");
+		btnNorth.setFont(new Font("",Font.BOLD,25));
+		f1.add("North",btnNorth);
 		
-		JTextField idT =new JTextField(5);
-		idT.setFont(new Font("",1,20));
-		f1.add(idT);
+		JButton btnWest=new JButton("West");
+		btnWest.setFont(new Font("",Font.BOLD,25));
+		f1.add("West",btnWest);
 		
-		JLabel nameL = new JLabel("Name");
-		nameL.setFont(new Font("",1,25));
-		f1.add(nameL);
+		JButton btnEast=new JButton("East");
+		btnEast.setFont(new Font("",Font.BOLD,25));
+		f1.add("East",btnEast);
 		
-		JTextField nameT=new JTextField(5);
-		nameT.setFont(new Font("",1,20));
-		f1.add(nameT);
+		JButton btn1=new JButton("1");
+		btn1.setFont(new Font("",Font.BOLD,25));
+		JButton btn2=new JButton("2");
+		btn2.setFont(new Font("",Font.BOLD,25));
+		JButton btn3=new JButton("3");
+		btn3.setFont(new Font("",Font.BOLD,25));
+		JButton btn4=new JButton("4");
+		btn4.setFont(new Font("",Font.BOLD,25));
 		
-		JLabel prfL = new JLabel("PrfMarks");
-		prfL.setFont(new Font("",1,25));
-		f1.add(prfL);
+		JPanel centerPanel=new JPanel();
+		centerPanel.setLayout(new GridLayout(2,2));
+		centerPanel.add(btn1);
+		centerPanel.add(btn2);
+		centerPanel.add(btn3);
+		centerPanel.add(btn4);
 		
-		JTextField prfT=new JTextField(5);
-		prfT.setFont(new Font("",1,20));
-		f1.add(prfT);
-		
-		JLabel DbmsL = new JLabel("DBMS Marks");
-		DbmsL.setFont(new Font("",1,25));
-		f1.add(DbmsL);
-		
-		JTextField DbmsT=new JTextField(5);
-		DbmsT.setFont(new Font("",1,20));
-		f1.add(DbmsT);
-		
-		f1.pack();
+		f1.add("Center",centerPanel);
 		f1.setVisible(true);
 	}
 }
