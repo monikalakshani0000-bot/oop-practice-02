@@ -1,38 +1,30 @@
 import javax.swing.*;
+import javax.swing.table.*;
 import java.awt.*;
-class Calculator extends JFrame{
+import java.awt.event.*;
+
+class MyFrame extends JFrame{
+	private JButton btnExit;
 	
-	private JTextField txtDisplay;
-	private JButton[] buttonArray;
-	
-	
-	
-	Calculator(){
-		setTitle("Calculator");
-		setSize(300,300);
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	MyFrame(){
+		setSize(400,300);
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		setLocationRelativeTo(null);
+		setLayout(new FlowLayout());
 		
-		txtDisplay=new JTextField(5);
-		txtDisplay.setFont(new Font("",1,20));
-		add("North",txtDisplay);
-		
-		buttonArray=new JButton[16];
-		String[] buttonName={"7","8","9","*","4","5","6","/","1","2","3","+","0",".","=","-"};
-
-		for (int i = 0; i < 16; i++){
-			buttonArray[i]=new JButton(buttonName[i]);
-			buttonArray[i].setFont(new Font("",Font.BOLD,25));
-			add(buttonArray[i]);
-		}
-
-		
+		btnExit=new JButton("Exit");
+		btnExit.setFont(new Font("",1,20));
+		btnExit.addActionListener(new ActionListener(){
+			public void actionPerformed(ActionEvent evt){
+				System.out.println("Exited....");
+				System.exit(0);
+			}
+		});
+		add(btnExit);
 	}
 }
-
 class Demo{
 	public static void main(String[] args) {
-		Calculator c1=new Calculator();
-		c1.setVisible(true);
+		new MyFrame().setVisible(true);
 	}
 }
